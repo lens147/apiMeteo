@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="90, 50, 240, 174">
+
+    <g>
+        <symbol id="rondB" viewBox="-40, -40, 100, 100">
+            <circle r="40" cx="0" cy="0" fill="#e9e9e9" />
+        </symbol>
+        <symbol id="rond30B" viewBox="-40, -40, 100, 100">
+            <circle r="30" cx="0" cy="0" fill="#e9e9e9" />
+        </symbol>
+        <symbol id="pluie" viewBox="-40, -40, 300, 100">
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(0 0)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(10 20)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(40 0)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(50 20)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(80 0)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(90 20)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(120 0)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(160 0)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(130 20)" />
+
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(-20 40)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(20 40)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(60 40)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(100 40)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(140 40)" />
+            
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(26 -16)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(66 -16)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(106 -16)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(146 -16)" />
+
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(16 -35)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(54 -35)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(92 -35)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(131 -35)" />
+            <line x1="0" y1="16" x2="10" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(179 -35)" />
+
+        </symbol>
+    </g>
+
+    <g>
+        <use href="#pluie" transform="translate(90 134)" width="250" height="100"/>
+
+        <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="translate"
+        from="0, 0"
+        to="-19, 39"
+        dur="1s"
+        repeatCount="indefinite" />
+    </g>
+
+    <g transform="translate(0 0)">
+        <circle r="50" cx="0" cy="0" fill="#fc9e12" transform="translate(150 100)" />
+
+        <use href="#rond30B" transform="translate(165 65)" width="100" height="100"/>
+        <use href="#rondB" transform="translate(100 100)" width="100" height="100"/>
+        <use href="#rondB" transform="translate(140 80)" width="100" height="100"/>
+        <use href="#rondB" transform="translate(220 70)" width="100" height="100"/>
+        <use href="#rondB" transform="translate(190 90)" width="100" height="100"/>
+        <use href="#rondB" transform="translate(240 90)" width="100" height="100"/>
+        <use href="#rondB" transform="translate(240 100)" width="100" height="100"/>
+        <rect x="0" y="0" width="140" height="50" rx="0" fill="#e9e9e9" transform="translate(140 130)" />
+    </g>
+
+</svg>

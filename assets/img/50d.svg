@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+
+    <symbol id="brum" viewBox="-23, 17, 100, 56">
+        <symbol id="firstLast" viewBox="-23, 17, 100, 56">
+            <line x1="0" y1="" x2="40" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(10 20)" />
+            <line x1="0" y1="" x2="60" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(0 70)" />
+        </symbol>
+        <symbol id="long1" viewBox="-23, 17, 100, 56">
+            <line x1="0" y1="" x2="80" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(-20 30)" />
+        </symbol>
+        <symbol id="long2" viewBox="-23, 17, 106, 56">
+            <line x1="0" y1="" x2="80" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(0 40)" />
+        </symbol>
+        <symbol id="long3" viewBox="-23, 17, 100, 56">
+            <line x1="0" y1="" x2="80" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(-20 50)" />
+        </symbol>
+        <symbol id="court1" viewBox="-23, 17, 100, 56">
+            <line x1="0" y1="" x2="70" y2="" stroke="black" stroke-width="6" stroke-linecap="round" transform="translate(0 60)" />
+        </symbol>
+    </symbol>
+
+
+    <use href="#firstLast" />
+
+
+
+    <g>
+        <use href="#long1" />
+        <use href="#long3" />
+
+        <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="translate"
+        from="0, 0"
+        to="10, 0"
+        dur="4s"
+        repeatCount="indefinite" />
+    </g>
+
+    <g>
+        <use href="#long2" />
+        <use href="#court1" />
+        
+        <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="translate"
+        from="0, 0"
+        to="-10, 0"
+        dur="4s"
+        repeatCount="indefinite" />
+    </g>
+
+
+</svg>
