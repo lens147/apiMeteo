@@ -1,3 +1,17 @@
+/* for (const tec in data.hourly) {	
+    hour = data.hourly[tec].temp;
+    templat = `
+    <strong class="d-block mb-2" id="wrapper-time1"></strong>
+    <img id="wrapper-icon-hour1" src="" class="" alt="" />
+    <strong class="d-block" id="wrapper-hour1"></strong>
+    `;
+
+    let iconHour = data.hourly[1].weather[0].icon;
+    let iconFullyUrlHourTemplat = iconBaseUrl + iconHour + iconFormat;
+    document.getElementById("wrapper-icon-hour-templat").src = iconFullyUrlHourTemplat;
+    console.log(hour);
+} */
+
 // API call
 let city = "Istanbul";
 let apiKeys = "ac4a1a419b9842d43d9c98a1eb1a67ac";
@@ -49,27 +63,27 @@ fetch(file)
     document.getElementById("wrapper-name").innerHTML = nameCity;
 
     // Weather hourly data
-    /* for (const tec in data.languagePairs) {	
+    let hour;
+
+    for (const tec in data.hourly) {	
+        hour = data.hourly[tec].temp;
+        templat = `
+        <strong class="d-block mb-2" id="wrapper-time1"></strong>
+        <img id="wrapper-icon-hour1" src="" class="" alt="" />
+        <strong class="d-block" id="wrapper-hour1"></strong>
+        `;
+
+        let iconHour = data.hourly[1].weather[0].icon;
+        let iconFullyUrlHourTemplat = iconBaseUrl + iconHour + iconFormat;
+        document.getElementById("wrapper-icon-hour-templat").src = iconFullyUrlHourTemplat;
+        document.getElementById("wrapper-hour1").innerHTML = hour + "°C";
+        document.getElementById("wrapper-time1").innerHTML = time1;
+        console.log(hour);
+    }
     let hourNow = data.hourly[0].temp;
-    let hour1 = data.hourly[1].temp;
-    let hour2 = data.hourly[2].temp;
-    let hour3 = data.hourly[3].temp;
-    let hour4 = data.hourly[4].temp;
-    let hour5 = data.hourly[5].temp;
-    } */
-    let hourNow = data.hourly[0].temp;
-    let hour1 = data.hourly[1].temp;
-    let hour2 = data.hourly[2].temp;
-    let hour3 = data.hourly[3].temp;
-    let hour4 = data.hourly[4].temp;
-    let hour5 = data.hourly[5].temp;
 
     document.getElementById("wrapper-hour-now").innerHTML = hourNow + "°C";
-    document.getElementById("wrapper-hour1").innerHTML = hour1 + "°C";
-    document.getElementById("wrapper-hour2").innerHTML = hour2 + "°C";
-    document.getElementById("wrapper-hour3").innerHTML = hour3 + "°C";
-    document.getElementById("wrapper-hour4").innerHTML = hour4 + "°C";
-    document.getElementById("wrapper-hour5").innerHTML = hour5 + "°C";
+    
 
     // Time
     let timeNow = new Date().getHours();
@@ -79,11 +93,8 @@ fetch(file)
     let time4 = time3 + 1;
     let time5 = time4 + 1;
 
-    document.getElementById("wrapper-time1").innerHTML = time1;
-    document.getElementById("wrapper-time2").innerHTML = time2;
-    document.getElementById("wrapper-time3").innerHTML = time3;
-    document.getElementById("wrapper-time4").innerHTML = time4;
-    document.getElementById("wrapper-time5").innerHTML = time5;
+
+
 
     // Weather daily data
     let tomorrowTemp = Math.round(data.daily[0].temp.day);
@@ -132,26 +143,6 @@ fetch(file)
     let iconHour1 = data.hourly[1].weather[0].icon;
     let iconFullyUrlHour1 = iconBaseUrl + iconHour1 + iconFormat;
     document.getElementById("wrapper-icon-hour1").src = iconFullyUrlHour1;
-
-    // Hour2
-    let iconHour2 = data.hourly[2].weather[0].icon;
-    let iconFullyUrlHour2 = iconBaseUrl + iconHour2 + iconFormat;
-    document.getElementById("wrapper-icon-hour2").src = iconFullyUrlHour1;
-
-    // Hour3
-    let iconHour3 = data.hourly[3].weather[0].icon;
-    let iconFullyUrlHour3 = iconBaseUrl + iconHour3 + iconFormat;
-    document.getElementById("wrapper-icon-hour3").src = iconFullyUrlHour3;
-
-    // Hour4
-    let iconHour4 = data.hourly[4].weather[0].icon;
-    let iconFullyUrlHour4 = iconBaseUrl + iconHour4 + iconFormat;
-    document.getElementById("wrapper-icon-hour4").src = iconFullyUrlHour4;
-
-    // Hour5
-    let iconHour5 = data.hourly[5].weather[0].icon;
-    let iconFullyUrlHour5 = iconBaseUrl + iconHour5 + iconFormat;
-    document.getElementById("wrapper-icon-hour5").src = iconFullyUrlHour5;
 
     // Backgrounds
     switch (main) {
