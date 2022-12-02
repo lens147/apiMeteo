@@ -71,6 +71,7 @@ fetch(file)
     let templat;
     let iconHour;
     let iconFullyUrlHourTemplat;
+    
 /*     let iconHour1 = data.hourly[1].weather[0].icon;
     let iconFullyUrlHour1 = iconBaseUrl + iconHour1 + iconFormat;
     document.getElementById("wrapper-icon-hour-templat").src = iconFullyUrlHour1; */
@@ -79,7 +80,8 @@ fetch(file)
         iconHour = data.hourly[tec].weather[0].icon;
         iconFullyUrlHourTemplat = iconBaseUrl + iconHour + iconFormat;
         time1 = timeNow + 1;
-        templat = `<div>
+        templat = `
+        <div>
             <strong class="d-block mb-2" id="wrapper-time1">${time1}</strong>
             <img id="wrapper-icon-hour-templat" src="${iconFullyUrlHourTemplat}" class="" alt="" width="50px" />
             <strong class="d-block" id="wrapper-hour1">${hour}°C</strong>
@@ -157,7 +159,7 @@ fetch(file)
     break;
     case "Rain":
     document.getElementById("wrapper-bg").style.backgroundImage =
-    "url('https://mdbgo.io/ascensus/mdb-advanced/img/rain.gif')";
+    "url('https://media.tenor.com/ZAw_hz_GBBsAAAAd/rain.gif')";
     break;
     case "Clear":
     document.getElementById("wrapper-bg").style.backgroundImage =
