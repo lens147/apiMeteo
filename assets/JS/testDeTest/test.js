@@ -39,10 +39,9 @@ fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKeys}`)
         lon = "lon=" + datas.lon + "&";
         nameCity = datas.name;
     });
-    console.log(lon);
     let file = queryUrl + lat + lon + apiOptions + apiKey;
         /* EnnnnnnndddTESTTTTTTTTTTTTTTTTTTTTTT */
-    console.log(file);
+
 fetch(file)
     .then((response) =>
     response.json()).then((data) => {
@@ -63,36 +62,37 @@ fetch(file)
     document.getElementById("wrapper-name").innerHTML = nameCity;
 
     // Weather hourly data
+    let parent = document.getElementById("wrapper-hour-templat");
+    let iconBaseUrl = "../../img/";
+    let iconFormat = ".svg";
     let hour;
-
-    for (const tec in data.hourly) {	
+    let timeNow = new Date().getHours();
+    let time1;       
+    let templat;
+    let iconHour;
+    let iconFullyUrlHourTemplat;
+/*     let iconHour1 = data.hourly[1].weather[0].icon;
+    let iconFullyUrlHour1 = iconBaseUrl + iconHour1 + iconFormat;
+    document.getElementById("wrapper-icon-hour-templat").src = iconFullyUrlHour1; */
+    for (const tec in data.hourly) {
         hour = data.hourly[tec].temp;
-        templat = `
-        <strong class="d-block mb-2" id="wrapper-time1"></strong>
-        <img id="wrapper-icon-hour1" src="" class="" alt="" />
-        <strong class="d-block" id="wrapper-hour1"></strong>
+        iconHour = data.hourly[tec].weather[0].icon;
+        iconFullyUrlHourTemplat = iconBaseUrl + iconHour + iconFormat;
+        time1 = timeNow + 1;
+        templat = `<div>
+            <strong class="d-block mb-2" id="wrapper-time1">${time1}</strong>
+            <img id="wrapper-icon-hour-templat" src="${iconFullyUrlHourTemplat}" class="" alt="" width="50px" />
+            <strong class="d-block" id="wrapper-hour1">${hour}°C</strong>
+            </div>
         `;
-
-        let iconHour = data.hourly[1].weather[0].icon;
-        let iconFullyUrlHourTemplat = iconBaseUrl + iconHour + iconFormat;
-        document.getElementById("wrapper-icon-hour-templat").src = iconFullyUrlHourTemplat;
-        document.getElementById("wrapper-hour1").innerHTML = hour + "°C";
-        document.getElementById("wrapper-time1").innerHTML = time1;
-        console.log(hour);
+             /* à finir */
+            parent.innerHTML += templat;
+        console.log(tec);
     }
+  
     let hourNow = data.hourly[0].temp;
 
     document.getElementById("wrapper-hour-now").innerHTML = hourNow + "°C";
-    
-
-    // Time
-    let timeNow = new Date().getHours();
-    let time1 = timeNow + 1;
-    let time2 = time1 + 1;
-    let time3 = time2 + 1;
-    let time4 = time3 + 1;
-    let time5 = time4 + 1;
-
 
 
 
@@ -110,8 +110,7 @@ fetch(file)
     dATTemp + "°C";
 
     // Icons
-    let iconBaseUrl = "../../img/";
-    let iconFormat = ".svg";
+
 
     // Today
     let iconCodeToday = data.current.weather[0].icon;
@@ -140,9 +139,7 @@ fetch(file)
     ).src = iconFullyUrlHourNow;
 
     // Hour1
-    let iconHour1 = data.hourly[1].weather[0].icon;
-    let iconFullyUrlHour1 = iconBaseUrl + iconHour1 + iconFormat;
-    document.getElementById("wrapper-icon-hour1").src = iconFullyUrlHour1;
+
 
     // Backgrounds
     switch (main) {
